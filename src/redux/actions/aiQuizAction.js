@@ -1,7 +1,7 @@
 import { AI_QUIZ_FAILURE, AI_QUIZ_REQUEST, AI_QUIZ_SUCCESS } from "./actionTypes";
 import { GoogleGenAI } from "@google/genai";
 
-const GOOGLE_API = import.meta.env.VITE_GEMINI_API_KEY;
+const GOOGLE_API = process.env.GEMINI_API_KEY;
 const ai = new GoogleGenAI({ apiKey: GOOGLE_API });
 
 const fetchAiQuiz = (userPrompt) => {
