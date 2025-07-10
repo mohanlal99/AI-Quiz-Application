@@ -36,10 +36,10 @@ const Quiz = () => {
     return <Result score={score} totalQuestion={totalQuestion}/>
   }
   return (
-    <div className="min-h-screen bg-gray-100 text-black flex items-center justify-center px-4">
+    <div className="min-h-screen  flex items-center justify-center px-4">
       <div className="w-full max-w-2xl bg-white shadow-lg rounded-lg p-6 space-y-6">
         <h1 className="text-2xl font-bold text-center text-gray-800">
-          Welcome back, {token.slice(0, 5)} Quiz
+          Welcome back, Quiz
         </h1>
 
         <div className="w-full bg-gray-200 rounded-full h-2.5">

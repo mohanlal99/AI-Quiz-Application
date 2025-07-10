@@ -2,7 +2,7 @@ import React from "react";
 
 const NotFound = () => {
   return (
-    <div>
+    <div className="flex items-center justify-center">
       <div className="main_wrapper">
         <div className="main">
           <div className="antenna">

@@ -62,12 +62,20 @@ const ResultPage = () => {
   return (
     <div className="min-h-fit">
       <div className="max-w-4xl mx-auto  rounded-lg shadow-lg m-2">
-        <h1 className="text-3xl font-bold text-center text-blue-100 mb-6">
+        <h1 className="text-3xl flex justify-between gap-2 items-center px-3 font-bold text-center text-blue-100 mb-6">
           Quiz Results
+          {averageScore !== null && (
+  <div className="text-center my-6">
+    <p className="text-lg text-gray-300">Your Average Score</p>
+    <div className="inline-block bg-green-600 text-white text-3xl font-bold px-6 py-3 rounded-full shadow-md">
+      {averageScore.toFixed(2)}%
+    </div>
+  </div>
+)}
         </h1>
 
         {quizData.length > 0 ? (
-          <div>
+          <div className="py-5">
             {/* Displaying each question's result */}
             {quizData.map((quizSet, index) => (
               <div key={index} className="mb-6">
@@ -127,6 +135,7 @@ const ResultPage = () => {
         ) : (
           <p className="text-center text-gray-600">No quiz data available.</p>
         )}
+        
       </div>
     </div>
   );
