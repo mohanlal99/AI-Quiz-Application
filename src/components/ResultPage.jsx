@@ -1,10 +1,12 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, XCircle } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 const ResultPage = () => {
   const [quizData, setQuizData] = useState([]);
   const [averageScore, setAverageScore] = useState(null);
   const [openQuiz, setOpenQuiz] = useState(null); // For handling which quiz is open
+
+  console.log(quizData);
 
   const calculateAverage = (data) => {
     let total = 0;
@@ -65,13 +67,13 @@ const ResultPage = () => {
         <h1 className="text-3xl flex justify-between gap-2 items-center px-3 font-bold text-center text-blue-100 mb-6">
           Quiz Results
           {averageScore !== null && (
-  <div className="text-center my-6">
-    <p className="text-lg text-gray-300">Your Average Score</p>
-    <div className="inline-block bg-green-600 text-white text-3xl font-bold px-6 py-3 rounded-full shadow-md">
-      {averageScore.toFixed(2)}%
-    </div>
-  </div>
-)}
+            <div className="text-center my-6">
+              <p className="text-lg text-gray-300">Your Average Score</p>
+              <div className="inline-block bg-green-600 text-white text-3xl font-bold px-6 py-3 rounded-full shadow-md">
+                {averageScore.toFixed(2)}%
+              </div>
+            </div>
+          )}
         </h1>
 
         {quizData.length > 0 ? (
@@ -88,31 +90,32 @@ const ResultPage = () => {
                 </div>
 
                 {openQuiz === index && (
-                  <div className="p-0 md:p-4  rounded-lg shadow-sm mt-4">
+                  <div className="p-0 md:p-4   rounded-lg shadow-sm mt-4">
                     {quizSet.map((question, idx) => (
                       <div
                         key={idx}
-                        className="p-4 bg-white rounded-lg shadow-sm mb-4">
+                        className="p-4 bg-white relative rounded-lg shadow-sm mb-4">
+                        <div className="absolute right-0 top-2 flex items-center space-x-2">
+                          {question.isCorrect ? (
+                            <CheckCircle size={50}  className="text-green-500 w-10 h-10" />
+                          ) : (
+                            <XCircle  size={50} className="text-red-500 w-10 h-10" />
+                          )}
+                          <span className="text-sm font-medium">
+                            {question.isCorrect ? "Correct" : "Wrong"}
+                          </span>
+                        </div>
                         <p className="text-lg font-medium text-gray-900">
                           {question.question}
                         </p>
                         <div className="mt-2">
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-green-300">
                             <strong>Correct Answer:</strong>{" "}
-                            {question.correctAnswer}
+                            {question?.options[question.correctAnswer]}
                           </p>
                           <p className="text-sm text-gray-600">
                             <strong>Your Answer:</strong>{" "}
                             {question.selectedAnswer}
-                          </p>
-                          <p
-                            className={`text-sm font-semibold ${
-                              question.isCorrect
-                                ? "text-green-500"
-                                : "text-red-500"
-                            }`}>
-                            <strong>Result:</strong>{" "}
-                            {question.isCorrect ? "Correct" : "Incorrect"}
                           </p>
                         </div>
                       </div>
@@ -135,7 +138,6 @@ const ResultPage = () => {
         ) : (
           <p className="text-center text-gray-600">No quiz data available.</p>
         )}
-        
       </div>
     </div>
   );
