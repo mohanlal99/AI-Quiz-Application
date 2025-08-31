@@ -1,68 +1,53 @@
-# AI Quiz Application
-This is an interactive AI Quiz Application built using React, Tailwind CSS, and Lucide React Icons. The application allows users to take a quiz, view their results, and navigate between different pages seamlessly. The app also includes a modern footer with links to GitHub and LinkedIn.
+# 🧠 AI Quiz Application
 
-Features
-Home Page: Welcome page with buttons to start the quiz or view previous results.
+An interactive **AI-powered Quiz Application** built with **React**, **Tailwind CSS**, and **Lucide React Icons**.  
+This app allows users to take quizzes, track progress, and view results in a modern and responsive UI.  
 
-Quiz Page: Users can answer a series of questions, track their progress, and see their results.
+---
 
-Results Page: Displays the user's answers, correct answers, and a score summary.
+## ✨ Features
 
-Responsive Design: The app is fully responsive, offering a smooth experience across all devices.
+- 🏠 **Home Page**: Welcome screen with options to start a quiz or view past results.  
+- ❓ **Quiz Page**: Answer a series of questions, track progress, and get instant feedback.  
+- 📊 **Results Page**: Displays the user’s answers, correct answers, and score summary.  
+- 💾 **Persistent Results**: Stores quiz results in **Local Storage** for future reference.  
+- 📱 **Responsive Design**: Optimized for mobile, tablet, and desktop devices.  
 
-Footer: Includes links to GitHub and LinkedIn profiles.
+---
 
-Tech Stack
-React: Frontend library for building the user interface.
+## 🛠️ Tech Stack
 
-React Router: For navigating between pages (Home, Quiz, Results).
+- ⚛️ **React** – Frontend library for building the UI  
+- 🌐 **React Router** – Page navigation (Home, Quiz, Results)  
+- 🎨 **Tailwind CSS** – Utility-first styling for responsive design  
+- 🎯 **Lucide React Icons** – Modern icons for UI components  
+- 💾 **Local Storage** – Save and persist quiz results across sessions  
 
-Tailwind CSS: Utility-first CSS framework for fast and responsive styling.
+---
 
-Lucide React Icons: Icons used throughout the app, including for the footer (GitHub, LinkedIn).
+## 📂 Project Structure
 
-Local Storage: Store quiz results for persistent state across sessions.
-
-App Structure
-The application is structured as follows:
-
-lua
-Copy
-Edit
+```bash
 /src
-|-- /components
-|   |-- Navbar.js
-|   |-- Footer.js
-|   |-- Home.js
-|   |-- QuizPage.js
-|   |-- ResultPage.js
-|-- /styles
-|   |-- index.css
-|-- App.js
-|-- index.js
-Installation
-Clone this repository:
+ ├── /components
+ │    ├── Navbar.js
+ │    ├── Footer.js
+ │    ├── Home.js
+ │    ├── QuizPage.js
+ │    └── ResultPage.js
+ ├── /styles
+ │    └── index.css
+ ├── App.js
+ └── index.js
+```
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/ai-quiz-app.git
-Navigate into the project directory:
+## 📸 Screenshots
 
-bash
-Copy
-Edit
-cd ai-quiz-app
-Install the required dependencies:
+| Home Page | Quiz Page |
+|-----------|-----------|
+| ![Home Page](https://i.postimg.cc/6qh2PwWF/image.png) | ![Quiz Page](https://i.postimg.cc/LsBpLsxd/image.png) |
 
-bash
-Copy
-Edit
-npm install
-Run the application:
+| Results Page | Responsive View |
+|--------------|-----------------|
+| ![Results Page](https://i.postimg.cc/d1ySrNsh/image.png) | ![Mobile View](https://i.postimg.cc/jSy53tMc/image.png) |
 
-bash
-Copy
-Edit
-npm start
-Your app will be live at http://localhost:3000.
