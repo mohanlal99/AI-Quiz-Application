@@ -1,4 +1,4 @@
-# 🧠 AI Quiz Application
+# 🧠 AI Quiz Application 
 
 An interactive **AI-powered Quiz Application** built with **React**, **Tailwind CSS**, and **Lucide React Icons**.  
 This app allows users to take quizzes, track progress, and view results in a modern and responsive UI.  
